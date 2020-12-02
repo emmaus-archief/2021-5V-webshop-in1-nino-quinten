@@ -29,7 +29,7 @@
             <a class="nav-link" href="/">Artikelen <span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <a href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
+        <a href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_sneakers"></span></button></a>
       </div>
     </nav>
     <main id="index">
@@ -78,7 +78,7 @@
         const productId = urlParams.get('productId');
 
         var request = new XMLHttpRequest()
-        request.open('GET', `/api/products/${productId}`, true)
+        request.open('GET', `/api/sneakers/${productId}`, true)
         request.onload = function () {
             var product = JSON.parse(this.response)
             if (request.status >= 200 && request.status < 400) {
