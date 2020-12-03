@@ -21,18 +21,18 @@ const checkoutOrder = (request, response) => {
   // order id: date + random number
   const orderId = dateFormat(new Date(), "yyyymmddhhMMss-") + Math.floor(Math.random()*1000);
 
-  db.getProductsByIds(articles, function(rows){
+  db.getsneakersByIds(articles, function(rows){
     
-    var products = {}
-    rows.forEach (p => products[p.id] = p)
+    var sneakers = {}
+    rows.forEach (p => sneakers[p.id] = p)
 
     var total = 0;
     for (let id in basket) {
-      total += basket[id]*products[id].price
+      total += basket[id]*sneakers[id].price
     }
     var articleTable = "<table>"
     articleTable += "<tr><th>Code</th><th>Naam</th><th>Aantal</th><th>Prijs</th></tr>"
-    Object.values(products).forEach( p => {
+    Object.values(sneakers).forEach( p => {
       articleTable += `<tr><td>${p.code}</td><td>${p.name}</td><td>${basket[p.id]}</td><td>€${p.price}</td></tr>`
     })
     articleTable += `<tr><td colspan="3">Totaal</td><td>€${total.toFixed(2)}</td><tr>`

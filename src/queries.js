@@ -22,12 +22,12 @@ if(process.env.GITPOD_WORKSPACE_ID === undefined) {
 const pool = new Pool(connectionString);
 pool.on('connect', () => console.log('connected to db'));
 
-const getProducts = (request, response) => {
+const getsneakers = (request, response) => {
   const category_id = parseInt(request.query.category)
-  var query = 'SELECT * FROM products ORDER BY id ASC'
+  var query = 'SELECT * FROM sneakers ORDER BY id ASC'
   var params = []
   if(category_id > 0){
-    query = 'SELECT * FROM products WHERE category_id = $1 ORDER BY id ASC'
+    query = 'SELECT * FROM sneakers WHERE category_id = $1 ORDER BY id ASC'
     params = [ category_id]
   }
   pool.query(query, params, (error, results) => {
@@ -42,7 +42,7 @@ const getProducts = (request, response) => {
 
 const getCategories = (_request, response) => {
   // TODO: change query to make it return categories
-  pool.query('SELECT * FROM products ORDER BY id ASC', (error, results) => {
+  pool.query('SELECT * FROM sneakers ORDER BY id ASC', (error, results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")
@@ -53,9 +53,9 @@ const getCategories = (_request, response) => {
 }
 
 
-const getProductsByIds = (ids, callback) => {
+const getsneakersByIds = (ids, callback) => {
   pool.query(
-    'SELECT * FROM products WHERE id = ANY($1::int[])',
+    'SELECT * FROM sneakers WHERE id = ANY($1::int[])',
     [ids],  // array of query arguments
     function(_err, result) {
       callback(result.rows)
@@ -64,7 +64,7 @@ const getProductsByIds = (ids, callback) => {
 
 const getProductById = (request, response) => {
   const id = parseInt(request.params.id)
-  pool.query('SELECT * FROM products WHERE id = $1', [id], (error, results) => {
+  pool.query('SELECT * FROM sneakers WHERE id = $1', [id], (error, results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")
@@ -74,11 +74,11 @@ const getProductById = (request, response) => {
   })
 }
 
-const getRelatedProductsById = (request, response) => {
+const getRelatedsneakersById = (request, response) => {
   const id = parseInt(request.params.id)
-  // TODO: change query to return related products
-  // it now return an array with the current products
-  pool.query('SELECT * FROM products WHERE id = $1', [id], (error, results) => {
+  // TODO: change query to return related sneakers
+  // it now return an array with the current sneakers
+  pool.query('SELECT * FROM sneakers WHERE id = $1', [id], (error, results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")
@@ -91,7 +91,7 @@ const getRelatedProductsById = (request, response) => {
 const createProduct = (request, response) => {
   const { name, email } = request.body
 
-  pool.query('INSERT INTO products (name, email) VALUES ($1, $2)', [name, email], (error, _results) => {
+  pool.query('INSERT INTO sneakers (name, email) VALUES ($1, $2)', [name, email], (error, _results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")
@@ -107,7 +107,7 @@ const updateProduct = (request, response) => {
 
   // Note: query is not correct
   pool.query(
-    'UPDATE products SET name = $1, email = $2 WHERE id = $3',
+    'UPDATE sneakers SET name = $1, email = $2 WHERE id = $3',
     [name, email, id],
     (error, _results) => {
       if (error) {
@@ -123,7 +123,7 @@ const updateProduct = (request, response) => {
 const deleteProduct = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('DELETE FROM products WHERE id = $1', [id], (error, _results) => {
+  pool.query('DELETE FROM sneakers WHERE id = $1', [id], (error, _results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")
@@ -135,11 +135,11 @@ const deleteProduct = (request, response) => {
 
 module.exports = {
   getCategories,
-  getProducts,
+  getsneakers,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
-  getProductsByIds,
-  getRelatedProductsById
+  getsneakersByIds,
+  getRelatedsneakersById
 }
