@@ -22,7 +22,7 @@
             <a class="nav-link" href="#">Kassa<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <a href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_sneakers"></span></button></a>
+        <a href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
       </div>
     </nav>
     <main>
@@ -105,7 +105,7 @@
         <td class="product_price">€</td>
       </tr>
     </template>
-    <template id="sneakersum">
+    <template id="productsum">
       <tr>
         <td colspan="3">Totaal</td>
         <td class="product_sum">€</td>
@@ -115,7 +115,7 @@
     <script>
     updateBasket()
     const template = document.querySelector('#productrow');
-    const totalTemplate = document.querySelector('#sneakersum');
+    const totalTemplate = document.querySelector('#productsum');
     const index = document.getElementById('index')
 
     const basket = readBasket()
