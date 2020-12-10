@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS products; 
-CREATE TABLE products (
+/*CREATE TABLE products (
   ID SERIAL PRIMARY KEY,
   colorway TEXT,
   name TEXT,
@@ -8,9 +8,24 @@ CREATE TABLE products (
   release_date INTEGER,
   silhouette TEXT,
   style INTEGER,
+  description TEXT,
+);*/
+
+CREATE TABLE products (
+  ID SERIAL PRIMARY KEY,
+  name TEXT,
+  description TEXT,
+  price INTEGER,
+  colorway TEXT,
+  brand TEXT,
+  release_date INTEGER,
+  silhouette TEXT,
+  code INTEGER
 );
 
-CREATE TABLE reccomended (
+/* kan style als code, misschien , die staat al in het systeem*/
+
+/*CREATE TABLE reccomended (
   ID SERIAL PRIMARY KEY,
   sneaker_id INTEGER,
 );
