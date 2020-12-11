@@ -1,8 +1,11 @@
 DROP TABLE IF EXISTS products; 
 CREATE TABLE products (
   ID SERIAL PRIMARY KEY,
-  code VARCHAR(15),
+  colorway VARCHAR(15),
   name VARCHAR(255),
-  description TEXT,
-  price NUMERIC(10, 2)
+  brand TEXT,
+  price NUMERIC(10, 2),
+  release_date NUMERIC,
+  silhouette TEXT,
+  style NUMERIC,
 );

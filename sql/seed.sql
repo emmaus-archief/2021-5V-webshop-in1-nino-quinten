@@ -4,7 +4,7 @@
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, brand, colorway, release_date, style, silhouette, price) values (jordan 4, Jordan, black, 4-05-2019, 308497-060, Jordan 4, 450);
+insert into products (name, brand, colorway, release_date, style, silhouette, price) values (jordan 4, jordan, black, 04-05-2019, 308497-060, jordan four, 400);
 
 /*insert into sneakers (name, brand, colorway, release_date, style, silhouette, price) values 
 
