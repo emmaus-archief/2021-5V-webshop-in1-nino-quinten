@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 			<a
-				href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_sneakers"></span></button></a>
+				href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
 		</div>
 	</nav>
 	<main id="index">
@@ -82,7 +82,7 @@
         app.appendChild(container)
 
         var request = new XMLHttpRequest()
-        request.open('GET', '/api/sneakers', true)
+        request.open('GET', '/api/products', true)
         request.onload = function () {
             var data = JSON.parse(this.response)
             if (request.status >= 200 && request.status < 400) {
