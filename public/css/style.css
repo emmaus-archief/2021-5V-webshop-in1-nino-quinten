@@ -67,7 +67,7 @@
 footer {  
   text-align: center;
   margin: 20px;
-  font-size: 28px;
+  font-size: 15px;
 } 
 
 body{
@@ -91,19 +91,19 @@ body{
     background-image: linear-gradient(90deg, #F18226 , #CA0EB3);
     margin: 30px;
     border-radius: 50%;
-    width: 50px;
+    width: 70px;
 }
 
 .facebook-button {
     background-color: rgb(28, 81, 206 ); 
     margin: 30px;
     border-radius: 50%;
-    width: 50px;
+    width: 70px;
 }
 
 .twitter-button {
     background-color: aqua;
     margin: 30px;
     border-radius: 50%;
-    width: 50px;
+    width: 70px;
 }

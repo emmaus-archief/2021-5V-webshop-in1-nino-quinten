@@ -16,11 +16,11 @@ insert into products (name, description, price, colorway, release_date, code, si
 insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Yeezy 500 Stone', 'Confortabele schoenen', 350, 10, 23-11-19, 468274828, 5,'Yeezy');
 insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Yeezy 700 Wave Runner', 'Chuncky schoenen die erg lekker lopen', 500, 11, 1-11-17, 264910364, 6,'Yeezy');
 
-insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Syracuse', 'Chuncky schoenen die erg lekker lopen', 450, 9, 14-3-20, 173947392, 7,'Nike');
-insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Kentucky', 'Chuncky schoenen die erg lekker lopen', 450, 3, 14-3-20, 273947135, 7,'Nike');
-insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Para', 'Chuncky schoenen die erg lekker lopen', 400, 8, 27-7-19, 926382618, 7,'Nike');
-insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk High Doraemon', 'Chuncky schoenen die erg lekker lopen', 250, 6, 4-9-20, 179376333, 8,'Nike');
-insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk High Spartan Green', 'Chuncky schoenen die erg lekker lopen', 200, 7, 18-9-20, 357894737, 8,'Nike');
+insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Syracuse', 'tiktok schoenen', 450, 9, 14-3-20, 173947392, 7,'Nike');
+insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Kentucky', 'lichte schoenen', 450, 3, 14-3-20, 273947135, 7,'Nike');
+insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk Low Para', 'goede collab', 400, 8, 27-7-19, 926382618, 7,'Nike');
+insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk High Doraemon', 'leuke colorway', 250, 6, 4-9-20, 179376333, 8,'Nike');
+insert into products (name, description, price, colorway, release_date, code, silhouette, brand) values ('Nike Dunk High Spartan Green', 'frisse kleuren', 200, 7, 18-9-20, 357894737, 8,'Nike');
 
 
 insert into schoenkleur (schoenkleur_id, schoenkleur_name) values (1, 'rood-zwart');
