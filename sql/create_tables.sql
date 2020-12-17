@@ -25,7 +25,7 @@ CREATE TABLE products (
 
 /* kan style als code, misschien , die staat al in het systeem*/
 
-/*CREATE TABLE reccomended (
+/*CREATE TABLE recomended (
   ID SERIAL PRIMARY KEY,
   sneaker_id INTEGER,
 );
