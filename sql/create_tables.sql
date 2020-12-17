@@ -12,7 +12,11 @@ CREATE TABLE products (
   code INTEGER
 );
 
-
+CREATE TABLE schoenkleur (
+  ID SERIAL PRIMARY KEY,
+  schoenkleur_id INTEGER,
+  schoenkleur_name TEXT
+);
 
 CREATE TABLE recomended (
   ID SERIAL PRIMARY KEY,
