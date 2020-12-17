@@ -57,7 +57,41 @@
   margin: auto;
 }
 
-footer {
+footer {  
+  text-align: center;
   margin: 20px;
   font-size: 12px;
 } 
+
+.facebook-button a:link, .twitter-button a:link, .insta-button a:link {
+    display: block;
+    color: white;
+    padding: 17px;
+    text-decoration: none;
+}
+
+.facebook-button:active, .twitter-button:active, .insta-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+}
+
+.insta-button {
+    background-image: linear-gradient(90deg, #F18226 , #CA0EB3);
+    margin: 30px;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.facebook-button {
+    background-color: rgb(28, 81, 206 ); 
+    margin: 30px;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.twitter-button {
+    background-color: aqua;
+    margin: 30px;
+    border-radius: 50%;
+    width: 50px;
+}
