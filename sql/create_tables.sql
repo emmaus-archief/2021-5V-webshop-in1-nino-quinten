@@ -52,3 +52,4 @@ CREATE TABLE silhouette_type (
   silhouette_name TEXT,
 );
 
+s
