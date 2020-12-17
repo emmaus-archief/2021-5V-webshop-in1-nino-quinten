@@ -22,7 +22,7 @@ if(process.env.GITPOD_WORKSPACE_ID === undefined) {
 const pool = new Pool(connectionString);
 pool.on('connect', () => console.log('connected to db'));
 
-const getProducts = (request, response) => {
+const getproducts = (request, response) => {
   const category_id = parseInt(request.query.category)
   var query = 'SELECT * FROM products ORDER BY id ASC'
   var params = []
@@ -53,7 +53,7 @@ const getCategories = (_request, response) => {
 }
 
 
-const getProductsByIds = (ids, callback) => {
+const getproductsByIds = (ids, callback) => {
   pool.query(
     'SELECT * FROM products WHERE id = ANY($1::int[])',
     [ids],  // array of query arguments
@@ -74,7 +74,7 @@ const getProductById = (request, response) => {
   })
 }
 
-const getRelatedProductsById = (request, response) => {
+const getRelatedproductsById = (request, response) => {
   const id = parseInt(request.params.id)
   // TODO: change query to return related products
   // it now return an array with the current products
@@ -135,11 +135,11 @@ const deleteProduct = (request, response) => {
 
 module.exports = {
   getCategories,
-  getProducts,
+  getproducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
-  getProductsByIds,
-  getRelatedProductsById
+  getproductsByIds,
+  getRelatedproductsById
 }

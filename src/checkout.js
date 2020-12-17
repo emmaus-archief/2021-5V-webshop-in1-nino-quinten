@@ -21,7 +21,7 @@ const checkoutOrder = (request, response) => {
   // order id: date + random number
   const orderId = dateFormat(new Date(), "yyyymmddhhMMss-") + Math.floor(Math.random()*1000);
 
-  db.getProductsByIds(articles, function(rows){
+  db.getproductsByIds(articles, function(rows){
     
     var products = {}
     rows.forEach (p => products[p.id] = p)
