@@ -67,13 +67,11 @@
 footer {  
   text-align: center;
   margin: 20px;
-<<<<<<< HEAD
   font-size: 28px;
 } 
 
 body{
   background-color: rgb(122, 122, 122);
-=======
   font-size: 12px;
 } 
 
@@ -108,5 +106,4 @@ body{
     margin: 30px;
     border-radius: 50%;
     width: 50px;
->>>>>>> 63f5378e4e280fb9488423ec5bc3f53ce32d8140
 }
