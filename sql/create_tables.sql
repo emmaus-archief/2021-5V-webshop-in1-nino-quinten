@@ -37,19 +37,15 @@ naam lijkt niet handig voor tabel
 
 CREATE TABLE schoennaam (
   ID SERIAL PRIMARY KEY,
-  schoen_id TEXT,
-);
+  schoen TEXT,
+);*/
 
-de rest misschien wel
 
 CREATE TABLE schoenkleur (
   ID SERIAL PRIMARY KEY,
-  kleurnaam TEXT,
+  schoenkleur_id INTEGER,
+  schoenkleur_name TEXT
 );
 
-CREATE TABLE silhouette_type (
-  ID SERIAL PRIMARY KEY,
-  silhouette_name TEXT,
-);
 
-s
+
