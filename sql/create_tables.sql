@@ -20,11 +20,9 @@ CREATE TABLE schoenkleur (
 
 CREATE TABLE recomended (
   ID SERIAL PRIMARY KEY,
-<<<<<<< HEAD
   sneaker_id INTEGER,
   andere_sneaker_id INTEGER
 );
-
 
 CREATE TABLE silhouette_type (
   ID SERIAL PRIMARY KEY,
@@ -32,17 +30,6 @@ CREATE TABLE silhouette_type (
   silhouette_name TEXT
 );
 
-=======
-  schoen TEXT,
-);*/
-
-
-CREATE TABLE schoenkleur (
-  ID SERIAL PRIMARY KEY,
-  schoenkleur_id INTEGER,
-  schoenkleur_name TEXT
-);
 
 
 
->>>>>>> Quineten-branch
